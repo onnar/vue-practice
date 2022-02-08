@@ -236,7 +236,7 @@ export default {
 .profile .summary .options { font-size: 0; }
 .profile .summary .options .option { margin-bottom: 5px; font-size: 13px; color: #39f; }
 
-.list { overflow: hidden; position: relative; border-top: 1px solid #000; background-color: #fff; }
+.list { overflow: hidden; position: relative; border-top: 1px solid #000; background-color: #fff; font-size:10px; }
 .list.list-introduction { padding: 27px 38px 33px; }
 .list.list-introduction div.header { font-weight: bold; }
 .list li.item { margin-bottom: 31px; }
