@@ -2,6 +2,7 @@
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <HelloWorld></HelloWorld>
+    <h1>sdfsdfsd</h1>
   </div>
 </template>
 
