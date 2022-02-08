@@ -12,6 +12,7 @@
     "bootstrap-vue": "^2.21.2",
     "bootstrap-vue-3": "^0.1.0",
     "core-js": "^3.6.5",
+    "swiper": "^8.0.3",
     "vue": "^3.2.29",
     "vue-router": "^4.0.0-0"
   },

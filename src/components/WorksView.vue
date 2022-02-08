@@ -1,25 +1,18 @@
 <template>
-    <ul class="list-gallery">
-        <li :key="id" v-for="(item, id) in options" :class="'item item-'+item.id">
-            <router-link :to="{name: 'Works', query: {view: 'view', id: item.id}}" @click="clickList(item.id)" v-if="item.show">
-                <figure class="itemBox">
-                    <div class="thumb"><img :src="item.imgSrc" :alt="item.title+' 썸네일 이미지'" onerror="this.src='//new.dev.wivismall.com//image/web/common/item_comingsoon.jpg'"></div>
-                    <figcaption>
-                        <dl>
-                            <dt>{{item.title}}</dt>
-                            <dd>{{item.workType}}</dd>
-                            <dd>{{item.version}}</dd>
-                        </dl>
-                    </figcaption>
-                </figure>
-            </router-link>
-        </li>
-    </ul>
+    sdflkj
 </template>
 
 <script>
 export default {
-    name: 'WorksList',
+    name: 'WorksView',
+    methods: {
+        clickList () {
+            this.$router.push({name: 'Query', query: {name: 'cat', age: 3}})
+        },
+        clickParams () {
+            this.$router.push({name: 'Params', params: {name: 'dog', age:4}})
+        }
+    },
     data() {
         return {
             pageTitle: 'Portfolio',
@@ -41,17 +34,6 @@ export default {
                 {id: 14, title: '세리박스', workType: '구축', version: 'PC / Mobile', imgSrc: '//jueon.dothome.co.kr/images/portfolio/10.jpg', show: false},
             ]
         }
-    },
-    methods: {
-        clickList (idVal) {
-            this.$router.push({
-                name: 'Works',
-                query: {
-                    view: 'view',
-                    id: idVal
-                }
-            })
-        }
-    },
+    }
 }
 </script>

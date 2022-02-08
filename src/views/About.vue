@@ -1,7 +1,10 @@
 <template>
   <div class="about">
     <h1>This is an about page</h1>
-
+    <figure>
+      <div><img src="//jueon.dothome.co.kr/images/portfolio/profile.jpg"></div>
+      <figcaption></figcaption>
+    </figure>
     <div class="base education">
       <h2 class="header">학력</h2>
       <div class="list list-education">
