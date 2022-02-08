@@ -27,7 +27,7 @@ export default {
         return {
             pageTitle: 'Portfolio',
             options: [
-                {id: 0, title: 'TBH SHOP', workType: '구축', version: 'PC / Mobile', imgSrc: '-http://jueon.dothome.co.kr/images/portfolio/1.jpg', show: true},
+                {id: 0, title: 'TBH SHOP', workType: '구축', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/1.jpg', show: true},
                 {id: 1, title: '모코블링', workType: '리뉴얼', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/2.jpg', show: true},
                 {id: 2, title: '내츄럴라이프', workType: '운영, 유지보수', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/3.jpg', show: true},
                 {id: 3, title: '돌리버리', workType: '구축', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/4.jpg', show: true},
@@ -42,6 +42,7 @@ export default {
                 {id: 12, title: '쉬비치', workType: '리뉴얼', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/6.jpg', show: true},
                 {id: 13, title: '위드이픈', workType: '리뉴얼', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/16.jpg', show: true},
                 {id: 14, title: '세리박스', workType: '구축', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/10.jpg', show: false},
+                {id: 99, title: '이미지', workType: '깨지는거', version: '테스트용', imgSrc: 'error_src.jpg', show: true},
             ]
         }
     },
