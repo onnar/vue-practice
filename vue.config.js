@@ -5,5 +5,14 @@
  */
     module.exports = {
         publicPath: '/vue-practice',
-        outputDir: 'docs'
+        outputDir: 'docs',
+        css: {
+            loaderOptions: {
+                sass: {
+                    data: `
+                        @import "@/assets/scss/app.scss";
+                    `
+                }
+            }
+        }
     }

@@ -98,12 +98,29 @@ input[type="button"], input[type="reset"], input[type="submit"], select {
     cursor: pointer;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.blind {
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.bgTypeImg img {
+    width: 100%;
+    height: 100%;
+    object-fit : cover
 }
 
 #app {

@@ -1,8 +1,9 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
     <figure>
-      <div><img src="//jueon.dothome.co.kr/images/portfolio/profile.jpg!"></div>
+      <div class="profile-img">
+        <span class="blind">강주언</span>
+      </div>
       <figcaption></figcaption>
     </figure>
     <div class="base education">
@@ -184,6 +185,13 @@ export default {
 </script>
 
 <style>
+.about .profile-img {
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  background: url('../assets/images/profile.jpg') no-repeat center / 80%;
+}
 .resume-view-container pre { font-family: 'Malgun Gothic'; }
 .resume-view-container .base { overflow: hidden; position: relative; margin-bottom: 33px; }
 .resume-view-container .base.career div.headers { font-size: 0; }
