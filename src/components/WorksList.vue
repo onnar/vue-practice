@@ -1,5 +1,5 @@
 <template>
-    npm
+    npm!
     <ul class="list-gallery">
         <li :key="id" v-for="(item, id) in options" :class="'item item-'+item.id">
             <router-link :to="{name: 'Works', query: {view: 'view', id: item.id}}" v-if="item.show">
@@ -64,3 +64,4 @@ export default {
         } */
     },
 }
+</script>
