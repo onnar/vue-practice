@@ -5,7 +5,7 @@
                 <figure class="itemBox">
                     <div class="thumb">
                         <!-- <img :src="item.imgSrc" :alt="item.title+' 썸네일 이미지'" onerror="this.src='//new.dev.wivismall.com//image/web/common/item_comingsoon.jpg'"> -->
-                        <img :src="item.imgSrc" :alt="item.title+' 썸네일 이미지'"><!-- @error="emptyImage" -->
+                        <img :src="item.imgSrc" :alt="item.title+' 썸네일 이미지 '"><!-- @error="emptyImage" -->
                     </div>
                     <figcaption>
                         <dl>
