@@ -42,7 +42,7 @@ export default {
                 {id: 12, title: '쉬비치', workType: '리뉴얼', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/6.jpg', show: true},
                 {id: 13, title: '위드이픈', workType: '리뉴얼', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/16.jpg', show: true},
                 {id: 14, title: '세리박스', workType: '구축', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/10.jpg', show: false},
-                {id: 99, title: '이미지', workType: '깨지는거', version: '테스트용', imgSrc: 'error_src.jpg', show: true},
+                {id: 99, title: '이미지', workType: '깨지는거', version: '테스트용', imgSrc: '/error_src.jpg', show: true},
             ]
         }
     },
