@@ -1,4 +1,5 @@
 <template>
+    <MovieList></MovieList>
     <ul class="list-gallery">
         <li v-for="(item, id) in options" :key="id" :class="'item item-'+item.id">
             <router-link :to="{name: 'Works', query: {view: 'view', id: item.id}}" v-if="item.show">
@@ -21,6 +22,7 @@
 </template>
 
 <script>
+import MovieList from '@/components/MovieList.vue'
 export default {
     name: 'WorksList',
     data() {
