@@ -1,7 +1,4 @@
 <template>
-  <div>
-    <h1>{{$route.query}} aaaa</h1>
-  </div>
   <WorksList v-if="!$route.query.id"></WorksList>
   <WorksView v-if="$route.query.id"></WorksView>
 </template>
