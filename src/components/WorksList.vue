@@ -1,11 +1,11 @@
-<template>
+<template>sss
     <ul class="list-gallery">
         <li :key="id" v-for="(item, id) in options" :class="'item item-'+item.id">
             <router-link :to="{name: 'Works', query: {view: 'view', id: item.id}}" v-if="item.show">
                 <figure class="itemBox">
                     <div class="thumb">
                         <!-- <img :src="item.imgSrc" :alt="item.title+' 썸네일 이미지'" onerror="this.src='//new.dev.wivismall.com//image/web/common/item_comingsoon.jpg'"> -->
-                        <img :src="item.imgSrc" :alt="item.title+' 썸네일 이미지'" @error="emptyImage">
+                        <img :src="item.imgSrc" :alt="item.title+' 썸네일 이미지'"><!-- @error="emptyImage" -->
                     </div>
                     <figcaption>
                         <dl>
@@ -42,7 +42,7 @@ export default {
                 {id: 12, title: '쉬비치', workType: '리뉴얼', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/6.jpg', show: true},
                 {id: 13, title: '위드이픈', workType: '리뉴얼', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/16.jpg', show: true},
                 {id: 14, title: '세리박스', workType: '구축', version: 'PC / Mobile', imgSrc: 'http://jueon.dothome.co.kr/images/portfolio/10.jpg', show: false},
-                {id: 99, title: '이미지', workType: '깨지는거', version: '테스트용', imgSrc: 'error_src.jpg', show: true},
+                {id: 99, title: '이미지', workType: '깨지는거', version: '테스트용', imgSrc: '/error_src.jpg', show: true},
             ]
         }
     },
@@ -56,11 +56,11 @@ export default {
                 }
             })
         },
-        emptyImage (e) {
+        /* emptyImage (e) {
             console.log(e);
             let imgUrl = 'http://jueon.dothome.co.kr/images/portfolio/noimg.jpg';
             e.target.src = imgUrl;
-        }
+        } */
     },
 }
 </script>
