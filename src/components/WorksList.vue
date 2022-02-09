@@ -5,7 +5,7 @@
                 <figure class="itemBox">
                     <div class="thumb">
                         <!-- <img :src="item.imgURL" :alt="item.title+' 썸네일 이미지'" onerror="this.src='//new.dev.wivismall.com//image/web/common/item_comingsoon.jpg'"> -->
-                        <img :src="item.imgURL" :alt="item.title+' 썸네일 이미지'"><!-- @error="emptyImage" -->
+                        <img :src="item.imgURL" :alt="item.title+' 썸네일 이미지'" onerror="this.src='https://mblogthumb-phinf.pstatic.net/MjAyMDAyMDJfMTg5/MDAxNTgwNjM5Mjg2ODA3.0-YSKsGsWAx9MQPsfqyJkMwqd1JTGSLZwmrp8QU9-AAg.66w-39mmNhkpS5C5L9HEhEnHwbP79dhh3KWF3n3Yliwg.PNG.lizziechung/image.png?type=w800'">
                     </div>
                     <figcaption>
                         <dl>
@@ -32,7 +32,8 @@ export default {
                     title: 'TBH SHOP',
                     workType: '구축',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/1.jpg'),
+                    //imgURL: require('@/assets/images/1.jpg'),
+                    imgURL: '/assets/images/1.jpg',
                     show: true
                 }, {
                     id: 1,
@@ -147,11 +148,12 @@ export default {
                 }
             })
         },
-        /* emptyImage (e) {
+        /*
+        emptyImage (e) {
             console.log(e);
-            let imgUrl = require(`@/assets/images/noimg.jpg';
-            e.target.src = imgUrl;
-        } */
+            var repURL = '';
+            e.target.src = repURL;
+        }*/
     },
 }
 </script>
