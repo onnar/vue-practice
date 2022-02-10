@@ -1,21 +1,11 @@
-<style>
-    #result {width: 980px; margin: 0 auto;}
-    table {
-        table-layout: fixed;
-        width: 100%;
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
-    table th, table td {
-        padding: 5px;
-        border: 1px solid #ddd;
-        font-size: 12px;
-    }
-</style>
 <template>
     <div id="result">
+        <div class="searchBox">
+            <input minlength="8" maxlength="8" placeholder="YYYYMMDD" v-model="myDate">
+            <button @click="callApi">검색</button>
+        </div>
         <table>
-            <caption>kobis data ajax test</caption>
+            <caption class="blind">kobis data ajax test</caption>
             <colgroup>
                 <col style="width: 10%;">
                 <col>
@@ -25,40 +15,117 @@
             </colgroup>
             <thead>
                 <tr>
-                    <th>no.</th>
-                    <th>title</th>
-                    <th>date</th>
-                    <th>rate</th>
-                    <th>ss</th>
+                    <th>순위</th>
+                    <th>제목</th>
+                    <th>개봉일</th>
+                    <th>점유율</th>
+                    <th>누적관객</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody v-if="movies">
+                <tr v-for="(item, id) in movies" :key="id">
+                    <td>{{ item.rank }}</td>
+                    <td>{{ item.movieNm }}</td>
+                    <td>{{ item.openDt }}</td>
+                    <td>{{ item.salesShare }}</td>
+                    <td>{{ item.audiCnt }}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
-    <h2>이곳에 값이 출력 됩니다.</h2>
-    <p v-for="result in history">{{result.index}}{{result.text}}</p>
-    <input v-model="input" />
-    <button v-on:click="callApi">검색</button> 1초후에 결과가 나옵니다.
 </template>
 <script>
+import axios from 'axios'
 export default {
     name: 'MovieList',
-    data: {
-        input: '롬5:1',
-        history:[],
-        message: '이곳에 결과가 나옵니다.'
+    data() {
+        return {
+            baseUrl: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json',
+            myKey: '113854b91df9adff54ea56e9e853c86f',
+            myDate: '',
+            movies: [],
+            display: false,
+        }
+    },
+    props: {
+        //display: this.display
     },
     methods: {
-        callApi: function () {
-            const input = this.input
-            fetch('https://2kstde4150.execute-api.ap-northeast-1.amazonaws.com/dev/v1/find/single/'+input)
-            .then(res => {
-                return res.json()
-            }).then(data => {
-                console.log(data)
-                this.history.push({'text':data[0]['text'], 'index':data[0]['index']})
+        callApi() {
+            axios.get(this.baseUrl + '?key=' + this.myKey + '&targetDt=' + this.myDate)
+            .then((res) => {
+                console.log(`${this.myDate} : ${res.data.boxOfficeResult.dailyBoxOfficeList}`);
+                this.movies = res.data.boxOfficeResult.dailyBoxOfficeList;
+                this.display = true;
+                return this.movies;
             })
+            .catch((error) => {
+                console.log('error : ' + error);
+            });
         }
-    }
+    },
+    created() {
+        console.log('created');
+    },
+    mounted() {
+        console.log('mounted');
+            this.$nextTick(function () {
+        })
+    },
+    updated() {
+        console.log('updated');
+            this.$nextTick(function () {
+        })
+    },
 }
 </script>
+<style>
+    #result {
+        width: 980px;
+        margin: 0 auto;
+    }
+
+    .searchBox {
+        display: flex;
+        position: relative;
+        width: 200px;
+        margin: 0 auto 20px;
+    }
+
+    .searchBox input:focus {
+        outline: 0;
+    }
+
+    .searchBox input {
+        flex: 1;
+        height: 36px;
+        padding: 0 10px;
+        border: solid #ccc;
+        border-width: 0 0 1px;
+        line-height: 1;
+    }
+
+    .searchBox button {
+        flex: none;
+        width: 80px;
+        border: 1px solid #c2c2c2;
+    }
+
+    table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    table th {
+        padding: 10px;
+        border: 1px solid #ddd;
+        font-size: 12px;
+    }
+    table td {
+        padding: 5px;
+        border: 1px solid #ddd;
+        font-size: 12px;
+    }
+</style>

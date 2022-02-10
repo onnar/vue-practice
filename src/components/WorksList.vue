@@ -25,6 +25,9 @@
 import MovieList from '@/components/MovieList.vue'
 export default {
     name: 'WorksList',
+    components: {
+        MovieList
+    },
     data() {
         return {
             pageTitle: 'Portfolio',
