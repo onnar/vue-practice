@@ -40,7 +40,7 @@ export default {
     name: 'MovieList',
     data() {
         return {
-            baseUrl: 'http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json',
+            baseUrl: 'https://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json',
             myKey: '113854b91df9adff54ea56e9e853c86f',
             myDate: '',
             movies: [],
