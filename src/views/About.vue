@@ -190,7 +190,7 @@ export default {
   width: 160px;
   height: 160px;
   border-radius: 80px;
-  background: url('../assets/images/profile.jpg') no-repeat center / 80%;
+  background: url('../assets/img/profile.jpg') no-repeat center / 80%;
 }
 .resume-view-container pre { font-family: 'Malgun Gothic'; }
 .resume-view-container .base { overflow: hidden; position: relative; margin-bottom: 33px; }
@@ -320,7 +320,7 @@ export default {
 .list.list-portfolio { overflow: hidden; font-size: 0; }
 .list.list-portfolio div.item { float: left; overflow: hidden; display: inline-block; width: 50%; height: 67px; padding: 21px 0 0 61px; vertical-align: top; border-top: 0; border-bottom: 1px solid #edeef0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .list.list-portfolio div.item:last-child, .list.list-portfolio div.item:nth-last-child(2):nth-child(odd) { border-bottom: 0; }
-.list.list-portfolio div.item i.icon { overflow: hidden; display: block; position: absolute; left: 40px; top: 23px; width: 16px; height: 16px; margin-right: 5px; vertical-align: top; background: url("/content/images/text_user/resume/view/sprite-icon-file.png") no-repeat; }
+.list.list-portfolio div.item i.icon { overflow: hidden; display: block; position: absolute; left: 40px; top: 23px; width: 16px; height: 16px; margin-right: 5px; vertical-align: top; background: url("/content/img/text_user/resume/view/sprite-icon-file.png") no-repeat; }
 .list.list-portfolio div.item i.icon.docx, .list.list-portfolio div.item i.icon.doc { background-position: 0 -118px; }
 .list.list-portfolio div.item i.icon.pptx, .list.list-portfolio div.item i.icon.ppt { background-position: 0 -164px; }
 .list.list-portfolio div.item i.icon.xlsx, .list.list-portfolio div.item i.icon.xls, .list.list-portfolio div.item i.icon.excel { background-position: 0 -210px; }

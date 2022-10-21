@@ -6,7 +6,7 @@
                 <figure class="itemBox">
                     <div class="thumb">
                         <!-- <img :src="item.imgURL" :alt="item.title+' 썸네일 이미지'" onerror="this.src='//new.dev.wivismall.com//image/web/common/item_comingsoon.jpg'"> -->
-                        <img :src="item.imgURL" :alt="item.title+' 썸네일 이미지'" onerror="this.src='https://mblogthumb-phinf.pstatic.net/MjAyMDAyMDJfMTg5/MDAxNTgwNjM5Mjg2ODA3.0-YSKsGsWAx9MQPsfqyJkMwqd1JTGSLZwmrp8QU9-AAg.66w-39mmNhkpS5C5L9HEhEnHwbP79dhh3KWF3n3Yliwg.PNG.lizziechung/image.png?type=w800'">
+                        <img :src="item.imgURL" :alt="item.title+' 썸네일 이미지'" >
                     </div>
                     <figcaption>
                         <dl>
@@ -37,106 +37,106 @@ export default {
                     title: 'TBH SHOP',
                     workType: '구축',
                     version: 'PC / Mobile',
-                    //imgURL: require('@/assets/images/1.jpg'),
-                    imgURL: '/assets/images/1.jpg',
+                    //imgURL: require('@/assets/img/1.jpg'),
+                    imgURL: '@/assets/img/1.jpg',
                     show: true
                 }, {
                     id: 1,
                     title: '모코블링',
                     workType: '리뉴얼',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/2.jpg'),
+                    imgURL: require('@/assets/img/2.jpg'),
                     show: true
                 }, {
                     id: 2,
                     title: '내츄럴라이프',
                     workType: '운영, 유지보수',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/3.jpg'),
+                    imgURL: require('@/assets/img/3.jpg'),
                     show: true
                 }, {
                     id: 3,
                     title: '돌리버리',
                     workType: '구축',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/4.jpg'),
+                    imgURL: require('@/assets/img/4.jpg'),
                     show: true
                 }, {
                     id: 4,
                     title: '클라라',
                     workType: '구축',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/5.jpg'),
+                    imgURL: require('@/assets/img/5.jpg'),
                     show: true
                 }, {
                     id: 5,
                     title: '인동에프엔 IDF MALL',
                     workType: '구축',
                     version: 'PC',
-                    imgURL: require('@/assets/images/7.jpg'),
+                    imgURL: require('@/assets/img/7.jpg'),
                     show: true
                 }, {
                     id: 6,
                     title: '임블리',
                     workType: '리뉴얼',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/8.jpg'),
+                    imgURL: require('@/assets/img/8.jpg'),
                     show: true
                 }, {
                     id: 7,
                     title: '셀렉온',
                     workType: '구축',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/9.jpg'),
+                    imgURL: require('@/assets/img/9.jpg'),
                     show: true
                 }, {
                     id: 8,
                     title: '에바주니',
                     workType: '리뉴얼',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/15.jpg'),
+                    imgURL: require('@/assets/img/15.jpg'),
                     show: true
                 }, {
                     id: 9,
                     title: '호밀',
                     workType: '리뉴얼',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/14.jpg'),
+                    imgURL: require('@/assets/img/14.jpg'),
                     show: true
                 }, {
                     id: 10,
                     title: '좋은사람들 B2C',
                     workType: '구축',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/11.jpg'),
+                    imgURL: require('@/assets/img/11.jpg'),
                     show: true
                 }, {
                     id: 11,
                     title: '남도애꽃',
                     workType: '리뉴얼',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/12.jpg'),
+                    imgURL: require('@/assets/img/12.jpg'),
                     show: true
                 }, {
                     id: 12,
                     title: '쉬비치',
                     workType: '리뉴얼',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/6.jpg'),
+                    imgURL: require('@/assets/img/6.jpg'),
                     show: true
                 }, {
                     id: 13,
                     title: '위드이픈',
                     workType: '리뉴얼',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/16.jpg'),
+                    imgURL: require('@/assets/img/16.jpg'),
                     show: true
                 }, {
                     id: 14,
                     title: '세리박스',
                     workType: '구축',
                     version: 'PC / Mobile',
-                    imgURL: require('@/assets/images/10.jpg'),
+                    imgURL: require('@/assets/img/10.jpg'),
                     show: false
                 },
                 //{id: 99, title: '이미지', workType: '깨지는거', version: '테스트용', imgURL: '/error_src.jpg'), show: true},

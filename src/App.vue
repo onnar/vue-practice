@@ -1,3 +1,6 @@
+<style lang="scss">
+@import "@/assets/scss/app.scss";
+</style>
 <template>
   <div class="container">
     <Header></Header>

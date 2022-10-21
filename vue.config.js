@@ -9,9 +9,8 @@
         css: {
             loaderOptions: {
                 sass: {
-                    data: `
-                        @import "@/assets/scss/app.scss";
-                    `
+                    prependData: `@import "@/assets/scss/app.scss";`
+                    additionalData: `@import "@/assets/scss/app.scss";`
                 }
             }
         }
